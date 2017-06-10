@@ -1,0 +1,19 @@
+c:/users/alex/documents/visual studio 2017/Projects/ShoppingCart/ShoppingCart/bin/Debug/netcoreapp1.1/ShoppingCart.deps.json
+c:/users/alex/documents/visual studio 2017/Projects/ShoppingCart/ShoppingCart/bin/Debug/netcoreapp1.1/ShoppingCart.runtimeconfig.json
+c:/users/alex/documents/visual studio 2017/Projects/ShoppingCart/ShoppingCart/bin/Debug/netcoreapp1.1/ShoppingCart.runtimeconfig.dev.json
+c:/users/alex/documents/visual studio 2017/Projects/ShoppingCart/ShoppingCart/bin/Debug/netcoreapp1.1/ShoppingCart.dll
+c:/users/alex/documents/visual studio 2017/Projects/ShoppingCart/ShoppingCart/obj/Debug/netcoreapp1.1/ShoppingCart.AssemblyInfo.cs
+c:/users/alex/documents/visual studio 2017/Projects/ShoppingCart/ShoppingCart/bin/Debug/netcoreapp1.1/ShoppingCart.pdb
+c:/users/alex/documents/visual studio 2017/Projects/ShoppingCart/ShoppingCart/obj/Debug/netcoreapp1.1/ShoppingCart.dll
+c:/users/alex/documents/visual studio 2017/Projects/ShoppingCart/ShoppingCart/obj/Debug/netcoreapp1.1/ShoppingCart.pdb
+C:/Users/Alex/documents/visual studio 2017/Projects/ShoppingCart/ShoppingCart/obj/Debug/netcoreapp1.1/ShoppingCart.csprojResolveAssemblyReference.cache
+/Users/brunoaybar/Documents/Development/Personal/NET/ShoppingCart/ShoppingCart/bin/Debug/netcoreapp1.1/ShoppingCart.deps.json
+/Users/brunoaybar/Documents/Development/Personal/NET/ShoppingCart/ShoppingCart/bin/Debug/netcoreapp1.1/ShoppingCart.runtimeconfig.json
+/Users/brunoaybar/Documents/Development/Personal/NET/ShoppingCart/ShoppingCart/bin/Debug/netcoreapp1.1/ShoppingCart.runtimeconfig.dev.json
+/Users/brunoaybar/Documents/Development/Personal/NET/ShoppingCart/ShoppingCart/bin/Debug/netcoreapp1.1/ShoppingCart.dll
+/Users/brunoaybar/Documents/Development/Personal/NET/ShoppingCart/ShoppingCart/bin/Debug/netcoreapp1.1/ShoppingCart.pdb
+/Users/brunoaybar/Documents/Development/Personal/NET/ShoppingCart/ShoppingCart/obj/Debug/netcoreapp1.1/ShoppingCart.csprojResolveAssemblyReference.cache
+/Users/brunoaybar/Documents/Development/Personal/NET/ShoppingCart/ShoppingCart/obj/Debug/netcoreapp1.1/ShoppingCart.csproj.CoreCompileInputs.cache
+/Users/brunoaybar/Documents/Development/Personal/NET/ShoppingCart/ShoppingCart/obj/Debug/netcoreapp1.1/ShoppingCart.AssemblyInfo.cs
+/Users/brunoaybar/Documents/Development/Personal/NET/ShoppingCart/ShoppingCart/obj/Debug/netcoreapp1.1/ShoppingCart.dll
+/Users/brunoaybar/Documents/Development/Personal/NET/ShoppingCart/ShoppingCart/obj/Debug/netcoreapp1.1/ShoppingCart.pdb
