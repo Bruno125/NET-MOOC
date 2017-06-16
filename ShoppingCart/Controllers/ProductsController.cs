@@ -7,26 +7,27 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ShoppingCart.Models;
+using ShoppingCart.Repository;
 
 namespace ShoppingCart.Controllers
 {
     [EnableCors("SiteCorsPolicy")]
     [Produces("application/json")]
-    [Route("api/Products")]
+    [Route("api/products")]
     public class ProductsController : Controller
     {
-        private readonly ShoppingCartContext _context;
+        private IProductRepository Repository;
 
-        public ProductsController(ShoppingCartContext context)
+        public ProductsController(IProductRepository repository)
         {
-            _context = context;
+            Repository = repository;
         }
 
         // GET: api/Products
         [HttpGet]
-        public IEnumerable<Products> GetProducts()
+        public IEnumerable<Product> GetProducts()
         {
-            return _context.Products;
+            return Repository.GetAll();
         }
 
         // GET: api/Products/5
@@ -38,7 +39,7 @@ namespace ShoppingCart.Controllers
                 return BadRequest(ModelState);
             }
 
-            var products = await _context.Products.SingleOrDefaultAsync(m => m.ProductId == id);
+            var products = Repository.Get(id);
 
             if (products == null)
             {
@@ -50,52 +51,43 @@ namespace ShoppingCart.Controllers
 
         // PUT: api/Products/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutProducts([FromRoute] int id, [FromBody] Products products)
+        public async Task<IActionResult> PutProducts([FromRoute] int id, [FromBody] Product product)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != products.ProductId)
+            if (id != product.ProductId)
             {
                 return BadRequest();
             }
 
-            _context.Entry(products).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ProductsExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+            if(Repository.Update(product)){
+                return NoContent();
+            }else{
+                return NotFound();
             }
 
-            return NoContent();
         }
 
         // POST: api/Products
         [HttpPost]
-        public async Task<IActionResult> PostProducts([FromBody] Products products)
+        public async Task<IActionResult> PostProduct([FromBody] Product product)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            _context.Products.Add(products);
-            await _context.SaveChangesAsync();
+            if(Repository.Save(product)){
+                return CreatedAtAction("GetProducts", new { id = product.ProductId }, product);
+            }else{
+                return NotFound();
+            }
 
-            return CreatedAtAction("GetProducts", new { id = products.ProductId }, products);
+
+
         }
 
         // DELETE: api/Products/5
@@ -107,21 +99,18 @@ namespace ShoppingCart.Controllers
                 return BadRequest(ModelState);
             }
 
-            var products = await _context.Products.SingleOrDefaultAsync(m => m.ProductId == id);
-            if (products == null)
+
+            var success = Repository.Delete(id);
+
+            if (Repository.Delete(id))
             {
-                return NotFound();
+                return Ok("{ \"msg\" : \"Success\" }");
             }
-
-            _context.Products.Remove(products);
-            await _context.SaveChangesAsync();
-
-            return Ok(products);
+            else
+            {
+                return NoContent();
+            }
         }
 
-        private bool ProductsExists(int id)
-        {
-            return _context.Products.Any(e => e.ProductId == id);
-        }
     }
 }

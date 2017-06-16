@@ -1,10 +1,9 @@
-﻿<Properties StartupConfiguration="RunProjects">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ShoppingCartWeb/appsettings.json">
+﻿<Properties StartupConfiguration="RunSolution">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ShoppingCart/Repository/Database/ShoppingCartContext.cs">
     <Files>
-      <File FileName="ShoppingCartWeb/Services/ISmsSender.cs" Line="1" Column="1" />
-      <File FileName="ShoppingCartWeb/Services/MessageServices.cs" Line="43" Column="47" />
-      <File FileName="ShoppingCartWeb/Startup.cs" Line="71" Column="18" />
-      <File FileName="ShoppingCartWeb/appsettings.json" Line="24" Column="27" />
+      <File FileName="ShoppingCart/appsettings.json" Line="10" Column="60" />
+      <File FileName="ShoppingCart/Startup.cs" Line="45" Column="15" />
+      <File FileName="ShoppingCart/Repository/Database/ShoppingCartContext.cs" Line="19" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -14,10 +13,10 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.ShoppingCartWeb PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations>
-    <MultiItemSolutionRunConfiguration Id="RunProjects" Name="RunProjects">
+    <MultiItemSolutionRunConfiguration Id="RunSolution" Name="RunSolution">
       <Items>
-        <StartupItem ItemId="{C3BF04DE-EA2F-43AE-84FF-EA2F5499D33E}" ItemName="ShoppingCart" ConfigurationId="Default" />
-        <StartupItem ItemId="{50111A87-9898-470D-9BFE-C47E1CBED285}" ItemName="ShoppingCartWeb" ConfigurationId="Default" />
+        <StartupItem ItemId="{C3BF04DE-EA2F-43AE-84FF-EA2F5499D33E}" ItemName="ShoppingCart" />
+        <StartupItem ItemId="{50111A87-9898-470D-9BFE-C47E1CBED285}" ItemName="ShoppingCartWeb" />
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
