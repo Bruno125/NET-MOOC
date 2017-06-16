@@ -14,6 +14,7 @@ using Swashbuckle.AspNetCore;
 using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using ShoppingCart.Repository;
+using ShoppingCart.Repository.Database;
 
 namespace ShoppingCart
 {
@@ -63,7 +64,7 @@ namespace ShoppingCart
 
 
             services.AddMvc().AddJsonOptions(a => a.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver());
-            //services.AddSingleton<IProductRepository, ProductsRepository>();
+            services.AddSingleton<IProductRepository, ProductRepository>();
             services.AddSwaggerGen(c =>{c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });});
 
             //services.AddSingleton<ICiudadRepository, CiudadRepository>();

@@ -25,9 +25,9 @@ namespace ShoppingCart.Controllers
 
         // GET: api/Products
         [HttpGet]
-        public IEnumerable<Product> GetProducts()
+        public async Task<IEnumerable<Product>> GetProducts()
         {
-            return Repository.GetAll();
+            return await Repository.GetAll();
         }
 
         // GET: api/Products/5
@@ -39,7 +39,7 @@ namespace ShoppingCart.Controllers
                 return BadRequest(ModelState);
             }
 
-            var products = Repository.Get(id);
+            var products = await Repository.Get(id);
 
             if (products == null)
             {
@@ -63,7 +63,7 @@ namespace ShoppingCart.Controllers
                 return BadRequest();
             }
 
-            if(Repository.Update(product)){
+            if(await Repository.Update(product)){
                 return NoContent();
             }else{
                 return NotFound();
@@ -80,7 +80,7 @@ namespace ShoppingCart.Controllers
                 return BadRequest(ModelState);
             }
 
-            if(Repository.Save(product)){
+            if(await Repository.Save(product)){
                 return CreatedAtAction("GetProducts", new { id = product.ProductId }, product);
             }else{
                 return NotFound();
@@ -102,7 +102,7 @@ namespace ShoppingCart.Controllers
 
             var success = Repository.Delete(id);
 
-            if (Repository.Delete(id))
+            if (await Repository.Delete(id))
             {
                 return Ok("{ \"msg\" : \"Success\" }");
             }
