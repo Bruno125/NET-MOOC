@@ -21,5 +21,17 @@ namespace ShoppingCart.Models
         [JsonIgnore]
         public virtual ICollection<ProductShoppingCart> ProductShoppingCarts { get; set; }
 
+        public override bool Equals(object obj)
+        {
+            if (!(obj is Product))
+                return false;
+
+            var other = (Product)obj;
+            return Name == other.Name && ProductId == other.ProductId
+                                && Price == other.Price && ImageUrl == other.ImageUrl
+                                && Description == other.Description;
+        }
+
+
     }
 }

@@ -11,6 +11,7 @@
     <Folder Include="Repository\Database\" />
     <Folder Include="Jwt\" />
     <Folder Include="Controllers\Models\" />
+    <Folder Include="Tests\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />

@@ -1,15 +1,17 @@
 ﻿<Properties StartupConfiguration="RunSolution">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ShoppingCart/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ShoppingCart/Tests/ProductTests.cs">
     <Files>
-      <File FileName="ShoppingCart/Controllers/UserController.cs" Line="28" Column="9" />
-      <File FileName="ShoppingCartWeb/Controllers/AccountController.cs" Line="155" Column="10" />
-      <File FileName="ShoppingCart/Startup.cs" Line="67" Column="46" />
+      <File FileName="ShoppingCart/Tests/ProductTests.cs" Line="19" Column="104" />
+      <File FileName="ShoppingCart/Repository/Database/ProductRepository.cs" Line="13" Column="33" />
+      <File FileName="ShoppingCart/Repository/Database/ShoppingCartContext.cs" Line="15" Column="81" />
+      <File FileName="ShoppingCart/Models/Product.cs" Line="24" Column="36" />
+      <File FileName="ShoppingCart/Startup.cs" Line="74" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/brunoaybar/Documents/Development/Personal/NET/ShoppingCart/ShoppingCart/Program.cs" relfile="ShoppingCart/Program.cs" line="36" column="1" />
+      <Breakpoint file="/Users/brunoaybar/Documents/Development/Personal/NET/ShoppingCart/ShoppingCart/Tests/ProductTests.cs" relfile="ShoppingCart/Tests/ProductTests.cs" line="44" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
