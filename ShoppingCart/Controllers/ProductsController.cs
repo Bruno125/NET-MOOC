@@ -25,8 +25,9 @@ namespace ShoppingCart.Controllers
         }
 
         // GET: api/Products
+        [Authorize("Bearer")]
         [HttpGet]
-        public async Task<IEnumerable<Product>> GetProducts()
+        public async Task<IEnumerable<Product>> GetProducts([FromHeader] string Authorization)
         {
             return await Repository.GetAll();
         }

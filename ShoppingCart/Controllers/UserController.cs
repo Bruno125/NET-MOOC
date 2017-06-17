@@ -26,6 +26,13 @@ namespace ShoppingCart.Controllers
             this.tokenProvider = tokenProvider;
         }
 
+		// GET: api/users/create
+		[HttpPost("generateToken")]
+        public async Task<TokenResponse> GenerateToken()
+        {
+            return await tokenProvider.GetToken();
+        }
+
 
 		// GET: api/users/create
 		[HttpPost("create")]
@@ -46,6 +53,7 @@ namespace ShoppingCart.Controllers
             }
             catch (UserExistsException)
             {
+                Response.StatusCode = 409;
                 return new TokenResponse()
                 {
                     Error = "User already exists"
@@ -73,6 +81,7 @@ namespace ShoppingCart.Controllers
             }
             else
             {
+                Response.StatusCode = 422;
                 return new TokenResponse()
                 {
                     Error = "Invalid credentials"
@@ -84,6 +93,7 @@ namespace ShoppingCart.Controllers
 		[HttpPost("social")]
         public async Task<TokenResponse> SocialAuth([FromBody] String accessToken)
         {
+            Response.StatusCode = 404;
 			return new TokenResponse()
 			{
 				Error = "NotImplementedException"

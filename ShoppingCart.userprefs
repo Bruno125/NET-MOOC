@@ -1,14 +1,9 @@
-﻿<Properties StartupConfiguration="{C3BF04DE-EA2F-43AE-84FF-EA2F5499D33E}|Default">
+﻿<Properties StartupConfiguration="RunSolution">
   <MonoDevelop.Ide.Workbench ActiveDocument="ShoppingCart/Startup.cs">
     <Files>
-      <File FileName="ShoppingCart/Jwt/TokenProviderMiddleware.cs" Line="68" Column="14" />
-      <File FileName="ShoppingCart/Startup.cs" Line="152" Column="108" />
-      <File FileName="ShoppingCart/Jwt/TokenProvider.cs" Line="13" Column="26" />
-      <File FileName="ShoppingCart/Controllers/UserController.cs" Line="73" Column="14" />
-      <File FileName="ShoppingCart/Program.cs" Line="27" Column="30" />
-      <File FileName="ShoppingCart/Controllers/ProductsController.cs" Line="16" Column="35" />
-      <File FileName="ShoppingCart/Controllers/ValuesController.cs" Line="18" Column="65" />
-      <File FileName="ShoppingCart/Jwt/TokenProviderOptions.cs" Line="14" Column="52" />
+      <File FileName="ShoppingCart/Controllers/UserController.cs" Line="28" Column="9" />
+      <File FileName="ShoppingCartWeb/Controllers/AccountController.cs" Line="155" Column="10" />
+      <File FileName="ShoppingCart/Startup.cs" Line="67" Column="46" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

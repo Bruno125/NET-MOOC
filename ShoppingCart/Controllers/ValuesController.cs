@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace ShoppingCart.Controllers
 {
     [EnableCors("SiteCorsPolicy")]
-    [Authorize("Bearer")]
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {

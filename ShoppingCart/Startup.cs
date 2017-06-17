@@ -47,8 +47,8 @@ namespace ShoppingCart
             var corsBuilder = new CorsPolicyBuilder();
             corsBuilder.AllowAnyHeader();
             corsBuilder.AllowAnyMethod();
-            //corsBuilder.WithOrigins("http://localhost:51190");
-            corsBuilder.AllowAnyOrigin(); // For anyone access.
+            corsBuilder.WithOrigins("https://localhost:4430");
+            //corsBuilder.AllowAnyOrigin(); // For anyone access.
                                           //corsBuilder.WithOrigins("http://localhost:56573"); // for a specific url. Don't add a forward slash on the end!
 
             services.AddCors(options =>
