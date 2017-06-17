@@ -1,15 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using ShoppingCart.Jwt;
 using ShoppingCart.Models;
 
 namespace ShoppingCart.Repository
 {
     public interface IUserRepository
     {
-        void Login(String email, String password);
-        void Create(User user);
-        void SocialAuth(String accessToken);
-        IEnumerable<User> GetAll();
+        Task<User> Login(String email, String password);
+        Task<User> Create(User user);
+        Task<User> SocialAuth(String accessToken);
+
+        Task<IEnumerable<User>> GetAll();
 
 	}
+
+
+	public class UserExistsException : Exception{}
 }

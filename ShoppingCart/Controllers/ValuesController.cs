@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ShoppingCart.Controllers
 {
     [EnableCors("SiteCorsPolicy")]
+    [Authorize("Bearer")]
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<string> Get([FromHeader] string Authorization)
         {
             return new string[] { "value1", "value2" };
         }

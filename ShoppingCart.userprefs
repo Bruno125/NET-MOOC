@@ -1,13 +1,21 @@
 ﻿<Properties StartupConfiguration="{C3BF04DE-EA2F-43AE-84FF-EA2F5499D33E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ShoppingCart/Repository/Database/ShoppingCartContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ShoppingCart/Startup.cs">
     <Files>
-      <File FileName="ShoppingCart/appsettings.json" Line="10" Column="60" />
-      <File FileName="ShoppingCart/Repository/Database/ShoppingCartContext.cs" Line="17" Column="10" />
+      <File FileName="ShoppingCart/Jwt/TokenProviderMiddleware.cs" Line="68" Column="14" />
+      <File FileName="ShoppingCart/Startup.cs" Line="152" Column="108" />
+      <File FileName="ShoppingCart/Jwt/TokenProvider.cs" Line="13" Column="26" />
+      <File FileName="ShoppingCart/Controllers/UserController.cs" Line="73" Column="14" />
+      <File FileName="ShoppingCart/Program.cs" Line="27" Column="30" />
+      <File FileName="ShoppingCart/Controllers/ProductsController.cs" Line="16" Column="35" />
+      <File FileName="ShoppingCart/Controllers/ValuesController.cs" Line="18" Column="65" />
+      <File FileName="ShoppingCart/Jwt/TokenProviderOptions.cs" Line="14" Column="52" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/brunoaybar/Documents/Development/Personal/NET/ShoppingCart/ShoppingCart/Program.cs" relfile="ShoppingCart/Program.cs" line="36" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.ShoppingCartWeb PreferredExecutionTarget="MonoDevelop.Default" />

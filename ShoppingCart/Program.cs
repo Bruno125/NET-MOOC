@@ -14,22 +14,27 @@ namespace ShoppingCart
         public static void Main(string[] args)
         {
             var cert = new X509Certificate2("localhost.pfx", "123456");
-            var host = new WebHostBuilder()
+            try{
 
-				.UseKestrel(options =>
-				{
-					options.UseHttps(cert);
-					options.UseConnectionLogging();
-					options.NoDelay = true;
-				})
-				.UseUrls("https://*:4431")
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseIISIntegration()
-                .UseStartup<Startup>()
-                .UseApplicationInsights()
-                .Build();
+				var host = new WebHostBuilder()
 
-            host.Run();
+					.UseKestrel(options =>
+					{
+						options.UseHttps(cert);
+						options.UseConnectionLogging();
+						options.NoDelay = true;
+					})
+					.UseUrls("https://*:4432")
+					.UseContentRoot(Directory.GetCurrentDirectory())
+					.UseIISIntegration()
+					.UseStartup<Startup>()
+					.UseApplicationInsights()
+					.Build();
+
+				host.Run();
+            }catch(Exception e){
+                Console.WriteLine("Exception: " + e.ToString());
+            }
         }
     }
 }
