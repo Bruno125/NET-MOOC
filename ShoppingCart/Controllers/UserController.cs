@@ -27,7 +27,7 @@ namespace ShoppingCart.Controllers
         }
 
 		// GET: api/users/create
-		[HttpPost("generateToken")]
+        [HttpGet("generateToken")]
         public async Task<TokenResponse> GenerateToken()
         {
             return await tokenProvider.GetToken();

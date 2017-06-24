@@ -14,6 +14,8 @@ using ShoppingCartWeb.Models;
 using ShoppingCartWeb.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Http;
+using ShoppingCartWeb.BL;
 
 namespace ShoppingCartWeb
 {
@@ -108,6 +110,19 @@ namespace ShoppingCartWeb
 
             services.Configure<AuthMessageSenderOptions>(Configuration);
             services.Configure<SMSOptions>(Configuration);
+
+
+			// Adds a default in-memory implementation of IDistributedCache.
+			services.AddDistributedMemoryCache();
+
+			services.AddSession(options =>
+			{
+                // Set a short timeout for easy testing.
+                options.IdleTimeout = TimeSpan.FromDays(1);
+				options.CookieHttpOnly = true;
+			});
+
+            services.AddSingleton<ProductBL>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -130,6 +145,8 @@ namespace ShoppingCartWeb
             app.UseStaticFiles();
 
             app.UseIdentity();
+
+            app.UseSession();
 
             // Add external authentication middleware below. To configure them please see https://go.microsoft.com/fwlink/?LinkID=532715
 

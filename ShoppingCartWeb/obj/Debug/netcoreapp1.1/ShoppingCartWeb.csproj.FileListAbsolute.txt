@@ -19,3 +19,14 @@ C:/Users/Alex/documents/visual studio 2017/Projects/ShoppingCart/ShoppingCartWeb
 /Users/brunoaybar/Documents/Development/Personal/NET/ShoppingCart/ShoppingCartWeb/obj/Debug/netcoreapp1.1/ShoppingCartWeb.AssemblyInfo.cs
 /Users/brunoaybar/Documents/Development/Personal/NET/ShoppingCart/ShoppingCartWeb/obj/Debug/netcoreapp1.1/ShoppingCartWeb.dll
 /Users/brunoaybar/Documents/Development/Personal/NET/ShoppingCart/ShoppingCartWeb/obj/Debug/netcoreapp1.1/ShoppingCartWeb.pdb
+/Users/fanlat/Personal/Development/net/NET-MOOC/ShoppingCartWeb/bin/Debug/netcoreapp1.1/ShoppingCartWeb.deps.json
+/Users/fanlat/Personal/Development/net/NET-MOOC/ShoppingCartWeb/bin/Debug/netcoreapp1.1/ShoppingCartWeb.runtimeconfig.json
+/Users/fanlat/Personal/Development/net/NET-MOOC/ShoppingCartWeb/bin/Debug/netcoreapp1.1/ShoppingCartWeb.runtimeconfig.dev.json
+/Users/fanlat/Personal/Development/net/NET-MOOC/ShoppingCartWeb/bin/Debug/netcoreapp1.1/ShoppingCartWeb.dll
+/Users/fanlat/Personal/Development/net/NET-MOOC/ShoppingCartWeb/bin/Debug/netcoreapp1.1/ShoppingCartWeb.pdb
+/Users/fanlat/Personal/Development/net/NET-MOOC/ShoppingCartWeb/obj/Debug/netcoreapp1.1/ShoppingCartWeb.csprojResolveAssemblyReference.cache
+/Users/fanlat/Personal/Development/net/NET-MOOC/ShoppingCartWeb/obj/Debug/netcoreapp1.1/ShoppingCartWeb.csproj.CoreCompileInputs.cache
+/Users/fanlat/Personal/Development/net/NET-MOOC/ShoppingCartWeb/obj/Debug/netcoreapp1.1/UserSecretsAssemblyInfo.cs
+/Users/fanlat/Personal/Development/net/NET-MOOC/ShoppingCartWeb/obj/Debug/netcoreapp1.1/ShoppingCartWeb.AssemblyInfo.cs
+/Users/fanlat/Personal/Development/net/NET-MOOC/ShoppingCartWeb/obj/Debug/netcoreapp1.1/ShoppingCartWeb.dll
+/Users/fanlat/Personal/Development/net/NET-MOOC/ShoppingCartWeb/obj/Debug/netcoreapp1.1/ShoppingCartWeb.pdb

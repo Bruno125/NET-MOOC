@@ -12,22 +12,22 @@ namespace ShoppingCartWeb
     {
         public static void Main(string[] args)
         {
-            var cert = new X509Certificate2("localhost.pfx", "123456");
-            var host = new WebHostBuilder()
+			var cert = new X509Certificate2("localhost.pfx", "123456");
+			var host = new WebHostBuilder()
 				.UseKestrel(options =>
 				{
 					options.UseHttps(cert);
 					options.UseConnectionLogging();
 					options.NoDelay = true;
 				})
-                .UseUrls("https://*:4430")
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseIISIntegration()
-                .UseStartup<Startup>()
-                .UseApplicationInsights()
-                .Build();
+				.UseUrls("https://*:4430")
+				.UseContentRoot(Directory.GetCurrentDirectory())
+				.UseIISIntegration()
+				.UseStartup<Startup>()
+				.UseApplicationInsights()
+				.Build();
+			host.Run();
 
-            host.Run();
         }
     }
 }

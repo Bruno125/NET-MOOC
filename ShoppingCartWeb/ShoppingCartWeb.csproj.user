@@ -15,6 +15,7 @@
     <StartAction>Project</StartAction>
     <EnvironmentVariables>
       <Variable name="ASPNETCORE_ENVIRONMENT" value="Development" xmlns="" />
+      <Variable name="DYLD_LIBRARY_PATH" value="/usr/local/lib/" xmlns="" />
     </EnvironmentVariables>
     <ApplicationURL>https://localhost:4430</ApplicationURL>
     <LaunchUrl></LaunchUrl>
