@@ -21,7 +21,7 @@ namespace ShoppingCartWeb.Controllers
         {
             var products = await ProductBL.GetProduct();
             Console.WriteLine("Products: " + products);
-            return View();
+            return View(products);
         }
 
         public IActionResult About()
