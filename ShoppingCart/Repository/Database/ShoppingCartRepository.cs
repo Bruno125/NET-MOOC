@@ -78,13 +78,20 @@ namespace ShoppingCart.Repository.Database
                 _context.ShoppingCarts.Add(cart);
 			}
 
-			var item = new ProductShoppingCart();
-			item.ProductId = Int32.Parse(productId);
-			item.ShoppingCartId = cart.ShoppingCartId;
-            cart.ProductShoppingCarts.Add(item);
+            var item = _context.ProductShoppingCarts.SingleOrDefault(
+                pc => pc.ShoppingCartId == cart.ShoppingCartId && pc.ProductId == Int32.Parse(productId)
+            );
 
-            await _context.SaveChangesAsync();
-			
+            if(item == null)
+			{
+				item = new ProductShoppingCart();
+				item.ProductId = Int32.Parse(productId);
+				item.ShoppingCartId = cart.ShoppingCartId;
+				cart.ProductShoppingCarts.Add(item);
+
+				await _context.SaveChangesAsync();
+			}
+
             return true;
 		}
 
