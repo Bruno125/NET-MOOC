@@ -1,16 +1,10 @@
 ﻿<Properties StartupConfiguration="RunSolution">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ShoppingCartWeb/Program.cs">
-    <Files>
-      <File FileName="ShoppingCartWeb/Views/Home/Index.cshtml" Line="42" Column="83" />
-      <File FileName="../FinalTendencias2017/Views/Account/Login.cshtml" Line="71" Column="1" />
-      <File FileName="ShoppingCartWeb/Views/Account/Login.cshtml" Line="4" Column="48" />
-      <File FileName="ShoppingCartWeb/Models/AccountViewModels/ExternalLoginConfirmationViewModel.cs" Line="7" Column="51" />
-      <File FileName="ShoppingCartWeb/Program.cs" Line="23" Column="29" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/fanlat/Personal/Development/net/NET-MOOC/ShoppingCart/Program.cs" relfile="ShoppingCart/Program.cs" line="36" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.ShoppingCartWeb PreferredExecutionTarget="MonoDevelop.Default" />

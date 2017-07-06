@@ -1,7 +1,6 @@
 ﻿﻿@using System.Collections.Generic
 @using Microsoft.AspNetCore.Http
 @using Microsoft.AspNetCore.Http.Authentication
-@using ShoppingCartWeb.Models.AccountViewModels
 @inject SignInManager<ApplicationUser> SignInManager
 @model LoginViewModel
 @{
@@ -11,6 +10,7 @@
 @section Breadcrumb{
     <li class="active">Login</li>
 }
+
 
 <!-- CONTENT section -->
 <div id="pageContent">
@@ -68,7 +68,9 @@
         </div>
     </div>
 </div>
+
 <!-- End CONTENT section -->
-@section Scripts {
+<!--@section Scripts {
     @RenderSection("~/bundles/jqueryval")
-}
+    
+}-->

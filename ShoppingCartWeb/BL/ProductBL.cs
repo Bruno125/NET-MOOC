@@ -19,7 +19,7 @@ namespace ShoppingCartWeb.BL
         {
             var client = await createClientWithToken();
 
-			HttpResponseMessage response = await client.GetAsync("https://localhost:4436/api/products");
+			HttpResponseMessage response = await client.GetAsync(BaseURL + "products");
 			if (response.IsSuccessStatusCode)
 			{
 				var json = await response.Content.ReadAsStringAsync();

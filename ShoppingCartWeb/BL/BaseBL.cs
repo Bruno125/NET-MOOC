@@ -12,7 +12,7 @@ namespace ShoppingCartWeb.BL
 {
     public abstract class BaseBL
     {
-        protected string BaseURL = "https://localhost:4436/api/";
+        protected string BaseURL = "https://localhost:4437/api/";
 
         const string TokenKey = "_Token";
         private ISession Session;
@@ -77,7 +77,7 @@ namespace ShoppingCartWeb.BL
 			{
 				HttpClient client = createClient();
 
-                HttpResponseMessage response = await client.GetAsync("https://localhost:4436/api/users/generateToken");
+                HttpResponseMessage response = await client.GetAsync(BaseURL + "users/generateToken");
 				if (response.IsSuccessStatusCode)
 				{
 					var json = await response.Content.ReadAsStringAsync();

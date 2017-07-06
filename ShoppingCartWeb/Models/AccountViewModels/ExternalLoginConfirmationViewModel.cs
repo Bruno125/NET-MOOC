@@ -6,10 +6,22 @@ using System.Threading.Tasks;
 
 namespace ShoppingCartWeb.Models.AccountViewModels
 {
-    public class ExternalLoginConfirmationViewModel
+	public class ExternalLoginConfirmationViewModel
+	{
+		[Required]
+		[EmailAddress]
+		public string Email { get; set; }
+
+		public class ExternalLoginListViewModel
+		{
+			public string ReturnUrl { get; set; }
+		}
+	}
+
+
+    public class ExternalLoginListViewModel
     {
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; }
+        public string ReturnUrl { get; set; }
     }
+
 }
