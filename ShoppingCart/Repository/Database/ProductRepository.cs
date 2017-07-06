@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ShoppingCart.Models;
@@ -50,6 +51,13 @@ namespace ShoppingCart.Repository.Database
                 return false;
             }
 
+        }
+
+        public Task<IEnumerable<Product>> Search(string query)
+        {
+            var mQuery = query.ToLower();
+            var results = _context.Products.Where(p => p.Name.ToLower().Contains(mQuery));
+            return Task.FromResult<IEnumerable<Product>>(results);
         }
 
         public async Task<bool> Update(Product entity)

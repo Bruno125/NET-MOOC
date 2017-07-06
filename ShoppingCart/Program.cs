@@ -24,7 +24,7 @@ namespace ShoppingCart
 						options.UseConnectionLogging();
 						options.NoDelay = true;
 					})
-					.UseUrls("https://*:4437")
+					.UseUrls("https://*:4439")
 					.UseContentRoot(Directory.GetCurrentDirectory())
 					.UseIISIntegration()
 					.UseStartup<Startup>()

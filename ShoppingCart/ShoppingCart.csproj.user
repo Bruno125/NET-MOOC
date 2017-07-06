@@ -16,7 +16,7 @@
     <EnvironmentVariables>
       <Variable name="ASPNETCORE_ENVIRONMENT" value="Development" xmlns="" />
     </EnvironmentVariables>
-    <ApplicationURL>https://localhost:4437/swagger</ApplicationURL>
+    <ApplicationURL>https://localhost:4439/swagger</ApplicationURL>
     <LaunchUrl></LaunchUrl>
   </PropertyGroup>
 </Project>

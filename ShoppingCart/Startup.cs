@@ -76,7 +76,8 @@ namespace ShoppingCart
 
             services.AddMvc().AddJsonOptions(a => a.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver());
             services.AddSingleton<IProductRepository, ProductRepository>();
-            services.AddSingleton<ITokenProvider>(new JwtTokenProvider(GetTokenOptions()));
+			services.AddSingleton<ITokenProvider>(new JwtTokenProvider(GetTokenOptions()));
+			services.AddSingleton<IShoppingCartRepository, ShoppingCartRepository>();
             services.AddSingleton<IUserRepository, UserRepository>();
             services.AddSwaggerGen(c =>{c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });});
 

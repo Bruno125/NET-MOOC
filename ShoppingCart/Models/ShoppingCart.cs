@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ShoppingCart.Models
 {
@@ -9,7 +10,6 @@ namespace ShoppingCart.Models
 
         public ShoppingCart()
         {
-            User = new User();
             ProductShoppingCarts = new HashSet<ProductShoppingCart>();
         }
 
@@ -19,5 +19,8 @@ namespace ShoppingCart.Models
 
         public virtual User User { get; set; }
         public virtual ICollection<ProductShoppingCart> ProductShoppingCarts { get; set; }
+
+        [NotMapped]
+        public ICollection<Product> Products { get; set; }
     }
 }

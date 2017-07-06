@@ -12,7 +12,6 @@ using ShoppingCart.Repository;
 
 namespace ShoppingCart.Controllers
 {
-    [EnableCors("SiteCorsPolicy")]
     [Produces("application/json")]
     [Route("api/products")]
     public class ProductsController : Controller
@@ -114,5 +113,14 @@ namespace ShoppingCart.Controllers
             }
         }
 
-    }
+		// GET: api/products/search
+		[Authorize("Bearer")]
+        [HttpGet("search")]
+        public async Task<IEnumerable<Product>> Search([FromHeader] string Authorization, [FromQuery] string query)
+		{
+            return await Repository.Search(query);
+		}
+
+
+	}
 }
