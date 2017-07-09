@@ -13,9 +13,8 @@ using ShoppingCart.Filters;
 
 namespace ShoppingCart.Controllers
 {
-    [EnableCors("SiteCorsPolicy")]
     [Produces("application/json")]
-    [Route("api/Products2")]
+    [Route("api/products2")]
     [ValidateModel]
     public class Products2Controller : Controller
     {

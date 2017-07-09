@@ -36,6 +36,7 @@ namespace ShoppingCart.Repository.Database
             }
         }
 
+
         public async Task<IEnumerable<User>> GetAll()
         {
             return _context.Users;
@@ -51,15 +52,20 @@ namespace ShoppingCart.Repository.Database
             var user = await _context.Users.SingleOrDefaultAsync(
                 u => u.Email == email && u.Password == password
             );
-
             return user;
         }
-
 
 
         public Task<User> SocialAuth(string accessToken)
         {
             throw new NotImplementedException();
         }
+
+
+        public async Task<User> Find(long userId)
+        {
+            return await _context.Users.SingleOrDefaultAsync(m => m.Id == userId);
+        }
+
     }
 }

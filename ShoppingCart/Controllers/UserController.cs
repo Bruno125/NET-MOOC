@@ -100,5 +100,23 @@ namespace ShoppingCart.Controllers
 			};
         }
 
+
+        // GET: api/users/social
+        [HttpGet("userInfo")]
+        public async Task<ProfileResponse> GetUserInfo ([FromHeader] string Authorization)
+        {
+            var token = Authorization.Substring(7);
+            var userId = tokenProvider.ReadUserId(token);
+            var user = await repository.Find(Int32.Parse(userId));
+			if (user != null)
+			{
+                return new ProfileResponse() { User = user };
+			}
+			else
+			{
+                return new ProfileResponse() { Error = "User not found" };
+			}
+        }
+
     }
 }

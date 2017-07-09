@@ -11,9 +11,8 @@ namespace ShoppingCart.Repository
         Task<User> Login(String email, String password);
         Task<User> Create(User user);
         Task<User> SocialAuth(String accessToken);
-
         Task<IEnumerable<User>> GetAll();
-
+        Task<User> Find(long userId);
 	}
 
 
